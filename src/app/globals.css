@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #020617;
+  --color-glass-effect: rgba(2, 6, 23, 0.7);
+  --color-glass-border: rgba(251, 191, 36, 0.15);
+  --color-accent-blue: #3b82f6;
+  --color-accent-purple: #8b5cf6;
+  --color-accent-gold: #fbbf24;
+}
+
+@layer base {
+  :root {
+    --background: #020617;
+    --foreground: #f8fafc;
+  }
+
+  body {
+    background-color: #020617;
+    color: #f8fafc;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    background-color: var(--color-glass-effect);
+    background-image: radial-gradient(circle at top left, rgba(251, 191, 36, 0.05), transparent);
+    backdrop-filter: blur(40px) saturate(200%);
+    border: 1px solid var(--color-glass-border);
+    box-shadow: 
+      0 25px 60px -15px rgba(0, 0, 0, 0.7),
+      inset 0 1px 1px rgba(251, 191, 36, 0.1);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+
+  .glass-button-pro {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-button-pro:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+    border-color: rgba(255,255,255,0.2);
+  }
+
+  .glass-button-pro:active {
+    transform: translateY(0);
+    scale: 0.98;
+  }
+}
+
+/* Custom Scrollbar for Pro Feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.6);
+}
+
