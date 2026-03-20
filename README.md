@@ -3,8 +3,7 @@
 Welcome to **TEACH EDISON**, a state-of-the-art Next.js 15+ quiz application built as my submission for the Frontend Developer Assignment. This platform leverages the Google Gemini AI to dynamically generate rigorous quizzes with stunning WebGL2-powered visual aesthetics.
 
 ## 🌟 Live Demo & Links
-- **Live Demo**: [Insert Vercel Link Here]
-- **Repository**: [Insert GitHub Link Here]
+- **Live Demo**: [quiz-ai-steel.vercel.app](url)
 
 ## ✨ Core Features Implemented
 
